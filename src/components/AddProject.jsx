@@ -35,7 +35,7 @@ export default function AddProject({addingProject, cancelProject}){
             modal.current.open()
             return
         }
-        if(invalidDueDate){
+        else if(invalidDueDate){
             dateError.current.open()
             return
         }
@@ -57,7 +57,7 @@ export default function AddProject({addingProject, cancelProject}){
         </Modal>
         <Modal ref={dateError} buttonCaption="Okay">
            <h2 className='text-xl font-bold text-stone-700 my-4'>Invalid Date</h2> 
-           <p className='text-stone-600 mb-4'>Please make sure that the due date is after the current date.</p>
+           <p className='text-blue-600 mb-4'>Please make sure that the due date is after the current date.</p>
         </Modal>
          <div className="w-[35rem] mt-16">
             <menu className="flex items-center justify-end gap-4 my-4">
